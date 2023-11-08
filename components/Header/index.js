@@ -81,7 +81,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/recipes")}
                     classes="first:ml-1"
                   >
                     Recipes
@@ -140,7 +140,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/recipes")}
                     classes="first:ml-1"
                   >
                     Recipes
@@ -213,7 +213,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/recipes")}
               classes="first:ml-1"
             >
               Recipes
@@ -278,7 +278,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/recipes")}
               classes="first:ml-1"
             >
               Recipes
