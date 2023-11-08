@@ -5,13 +5,13 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-    apiKey: "your-api-key",
-    authDomain: "your-auth-domain",
-    projectId: "your-project-id",
-    storageBucket: "your-storage-bucket",
-    messagingSenderId: "your-messaging-sender-id",
-    appId: "your-app-id",
-    measurementId: "your-measurement-id"
+    apiKey: "AIzaSyC4dM5cCzqXBPZzwXMJvsf-Pcrz99S3Ozg",
+    authDomain: "memorylane-cba54.firebaseapp.com",
+    projectId: "memorylane-cba54",
+    storageBucket: "memorylane-cba54.appspot.com",
+    messagingSenderId: "977349991184",
+    appId: "1:977349991184:web:a9706f087af4e1a8776395",
+    measurementId: "G-MEH9JJD81R"
 };
 
 // Initialize Firebase
