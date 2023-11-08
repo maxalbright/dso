@@ -74,7 +74,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
+                        window.open("mailto:maxdanielalbright@gmail.com")
                       }
                     >
                       Resume
@@ -105,7 +105,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Photos
                   </Button>
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/voicememos")}
                     classes="first:ml-1"
                   >
                     Voice Memos
@@ -164,7 +164,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Photos
                   </Button>
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/voicememos")}
                     classes="first:ml-1"
                   >
                     Voice Memos
@@ -237,7 +237,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Photos
             </Button>
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/voicememos")}
               classes="first:ml-1"
             >
               Voice Memos
@@ -249,7 +249,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Plans/Pricing
             </Button>
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -302,7 +302,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Photos
             </Button>
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/voicememos")}
               classes="first:ml-1"
             >
               Voice Memos
@@ -314,7 +314,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Plans/Pricing
             </Button>
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact
             </Button>
 
