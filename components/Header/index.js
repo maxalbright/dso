@@ -99,7 +99,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Family Tree
                   </Button>
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/photos")}
                     classes="first:ml-1"
                   >
                     Photos
@@ -158,7 +158,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Family Tree
                   </Button>
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/photos")}
                     classes="first:ml-1"
                   >
                     Photos
@@ -231,7 +231,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Family Tree
             </Button>
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/photos")}
               classes="first:ml-1"
             >
               Photos
@@ -296,7 +296,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Family Tree
             </Button>
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/photos")}
               classes="first:ml-1"
             >
               Photos
