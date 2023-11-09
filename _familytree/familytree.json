@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "birthDate": "1990-01-01",
+        "deathDate": null,
+        "children": [
+            "2"
+        ],
+        "parents": []
+    },
+    {
+        "id": "2",
+        "name": "Jane Doe",
+        "birthDate": "1992-02-02",
+        "deathDate": null,
+        "children": [],
+        "parents": [
+            "1"
+        ]
+    }
+]
