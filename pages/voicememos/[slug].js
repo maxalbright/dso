@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { join } from 'path';
 import React, { useRef, useState } from "react";
+import ReactAudioPlayer from 'react-audio-player';
 import { stagger } from "../../animations";
 import BlogEditor from "../../components/BlogEditor";
 import Button from "../../components/Button";
@@ -31,29 +32,28 @@ const BlogPost = ({ post }) => {
       </Head>
       {data.showCursor && <Cursor />}
 
-      <div
-        className={`container mx-auto mt-10 ${data.showCursor && "cursor-none"
-          }`}
-      >
+      <div className={`container mx-auto mt-10 ${data.showCursor && "cursor-none"}`}>
         <Header isBlog={true} />
         <div className="mt-10 flex flex-col">
           <img
             className="w-full h-96 rounded-lg shadow-lg object-cover"
             src={post.image}
             alt={post.title}
-          ></img>
+          />
           <h1
             ref={textOne}
             className="mt-10 text-4xl mob:text-2xl laptop:text-6xl text-bold"
           >
             {post.title}
           </h1>
-          <h2
-            ref={textTwo}
-            className="mt-2 text-xl max-w-4xl text-darkgray opacity-50"
-          >
-            {post.tagline}
-          </h2>
+          {/* Audio player */}
+          <div ref={textTwo} className="mt-2">
+            <ReactAudioPlayer
+              src={post.tagline} // Assuming post.tagline is the URL to the MP3 file
+              controls
+              className="max-w-4xl w-full" // Set the width as needed
+            />
+          </div>
         </div>
         <ContentSection content={post.content}></ContentSection>
         <Footer />
@@ -68,6 +68,7 @@ const BlogPost = ({ post }) => {
 
       {showEditor && (
         <BlogEditor
+          location={"voicememos"}
           post={post}
           close={() => setShowEditor(false)}
           refresh={() => router.reload(window.location.pathname)}

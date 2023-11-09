@@ -1,16 +1,16 @@
-import React, { useRef, useState } from "react";
-import { getPostBySlug, getAllPosts } from "../../utils/api";
-import Header from "../../components/Header";
-import ContentSection from "../../components/ContentSection";
-import Footer from "../../components/Footer";
 import Head from "next/head";
-import { useIsomorphicLayoutEffect } from "../../utils";
-import { stagger } from "../../animations";
-import Button from "../../components/Button";
-import BlogEditor from "../../components/BlogEditor";
 import { useRouter } from "next/router";
+import React, { useRef, useState } from "react";
+import { stagger } from "../../animations";
+import BlogEditor from "../../components/BlogEditor";
+import Button from "../../components/Button";
+import ContentSection from "../../components/ContentSection";
 import Cursor from "../../components/Cursor";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
+import { useIsomorphicLayoutEffect } from "../../utils";
+import { getAllPosts, getPostBySlug } from "../../utils/api";
 
 const BlogPost = ({ post }) => {
   const [showEditor, setShowEditor] = useState(false);
@@ -31,9 +31,8 @@ const BlogPost = ({ post }) => {
       {data.showCursor && <Cursor />}
 
       <div
-        className={`container mx-auto mt-10 ${
-          data.showCursor && "cursor-none"
-        }`}
+        className={`container mx-auto mt-10 ${data.showCursor && "cursor-none"
+          }`}
       >
         <Header isBlog={true} />
         <div className="mt-10 flex flex-col">
@@ -68,6 +67,7 @@ const BlogPost = ({ post }) => {
 
       {showEditor && (
         <BlogEditor
+          location={"blog"}
           post={post}
           close={() => setShowEditor(false)}
           refresh={() => router.reload(window.location.pathname)}

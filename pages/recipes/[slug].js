@@ -68,6 +68,7 @@ const BlogPost = ({ post }) => {
 
       {showEditor && (
         <BlogEditor
+          location={"recipes"}
           post={post}
           close={() => setShowEditor(false)}
           refresh={() => router.reload(window.location.pathname)}

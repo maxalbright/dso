@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Button from "../../components/Button";
-import DatePicker from "react-datepicker";
-import TextareaAutosize from "react-textarea-autosize";
 import { useTheme } from "next-themes";
-
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import TextareaAutosize from "react-textarea-autosize";
+import Button from "../../components/Button";
 
-const BlogEditor = ({ post, close, refresh }) => {
+
+const BlogEditor = ({ location, post, close, refresh }) => {
   const { theme } = useTheme();
   const [currentTabs, setCurrentTabs] = useState("BLOGDETAILS");
   const [blogContent, setBlogContent] = useState(post.content);
@@ -20,7 +20,7 @@ const BlogEditor = ({ post, close, refresh }) => {
 
   const savePost = async () => {
     if (process.env.NODE_ENV === "development") {
-      await fetch("/api/blog/edit", {
+      await fetch("/api/" + location + "/edit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,9 +43,8 @@ const BlogEditor = ({ post, close, refresh }) => {
 
   return (
     <div
-      className={`fixed z-10 w-screen h-screen overflow-auto top-0 flex flex-col items-center ${
-        theme === "dark" ? "bg-black" : "bg-white"
-      }`}
+      className={`fixed z-10 w-screen h-screen overflow-auto top-0 flex flex-col items-center ${theme === "dark" ? "bg-black" : "bg-white"
+        }`}
     >
       <div className="container my-20">
         <div className="mt-10">
@@ -103,7 +102,11 @@ const BlogEditor = ({ post, close, refresh }) => {
             </div>
 
             <div className="mt-5 flex flex-col items-center">
-              <label className="w-full text-sx opacity-50">Tagline</label>
+              {location == "voicememos" ? (
+                <label className="w-full text-sx opacity-50">Link To MP3</label>
+              ) : (
+                <label className="w-full text-sx opacity-50">Tagline</label>
+              )}
               <input
                 value={blogVariables.tagline}
                 onChange={(e) =>
