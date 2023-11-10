@@ -28,69 +28,34 @@
     "projects": [
         {
             "id": "1",
-            "title": "Project One Test",
-            "description": "Web Design",
-            "imageSrc": "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
+            "title": "Aidan's Wedding",
+            "description": "Photo",
+            "imageSrc": "https://assets.vogue.com/photos/645ba7a6a22b7272aab20623/4:3/w_2436,h_1827,c_limit/Kamila%20&%20Oren%2048.jpg",
+            "url": "http://localhost:3000/photos/3259bbf1-fec7-440a-b1ef-83d2b8929f26"
         },
         {
             "id": "2",
-            "title": "Project Two",
-            "description": "Web Development",
-            "imageSrc": "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
+            "title": "John's Piano Recital",
+            "description": "Voice Memo",
+            "imageSrc": "https://www.thepiano.sg/sites/thepiano.sg/files/styles/read_article_main_picture/public/thepiano_images/read/2019/02/23/15/41/shawn-lee-performing-pianovers-recital-2018.jpg?itok=Kkk4c9T5",
+            "url": "http://localhost:3000/voicememos/778395cc-2243-4c74-a279-448c6bd50331"
         },
         {
             "id": "3",
-            "title": "Project Three",
-            "description": "Design",
-            "imageSrc": "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
+            "title": "Raspberry Toaster Strudel",
+            "description": "Recipe",
+            "imageSrc": "https://www.thespruceeats.com/thmb/xdj05UZ9M4pfTqAtt60p2k2tAtE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ToasterStrudelHERO-d21aea52ae0e43f1b550d4459c8e7cc2.jpg",
+            "url": "http://localhost:3000/recipes/5aad39af-c4cd-4997-a998-0a344e3b7eb0"
         },
         {
             "id": "4",
-            "title": "Project Four",
-            "description": "Marketing",
-            "imageSrc": "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
-        },
-        {
-            "id": "5",
-            "title": "Project Five",
-            "description": "Development",
-            "imageSrc": "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
-        },
-        {
-            "id": "6",
-            "title": "Project Six",
-            "description": "Design & Development",
-            "imageSrc": "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
+            "title": "Sam's First Steps",
+            "description": "Photo",
+            "imageSrc": "https://lovevery.com/community/blog/wp-content/uploads/2020/11/Walking-and-Other-Milestones_27x16.jpg",
+            "url": "http://localhost:3000/photos/c94460b7-b955-4fc3-82ca-21af06c12f2e"
         }
     ],
-    "services": [
-        {
-            "id": "1",
-            "title": "Art Direction",
-            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
-        },
-        {
-            "id": "2",
-            "title": "Branding",
-            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
-        },
-        {
-            "id": "3",
-            "title": "Web Design",
-            "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
-        },
-        {
-            "id": "4",
-            "title": "3D Design",
-            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
-        }
-    ],
+    "services": [],
     "aboutpara": "Welcome to MemoryLane, where we bring your life story to life.\n\nWe are passionate about preserving and celebrating your cherished memories.\n\nOur vision is a world where every memory becomes a lasting legacy.\nWhether you're a family capturing the growth of your children or an elderly individual leaving a heartfelt story, we provide the canvas for your memories.\n\nExplore Our Plans\nChoose from our free or subscription-based plans for more storage and customization.\n\nJoin Our Community\nJoin our vibrant community of memory enthusiasts and start your MemoryLane journey today!",
     "resume": {
         "tagline": "👋  I'm a software engineer, product designer.",

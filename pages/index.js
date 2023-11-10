@@ -1,18 +1,17 @@
+import Head from "next/head";
+import Link from "next/link";
 import { useRef } from "react";
+import { stagger } from "../animations";
+import Button from "../components/Button";
+import Cursor from "../components/Cursor";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
-
 // Local Data
 import data from "../data/portfolio.json";
+import { useIsomorphicLayoutEffect } from "../utils";
+
 
 export default function Home() {
   // Ref
@@ -94,7 +93,7 @@ export default function Home() {
           <Socials className="mt-2 laptop:mt-5" />
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
+          <h1 className="text-2xl text-bold">Take A Trip Down Memory Lane</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
@@ -109,8 +108,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
+        {/* <div className="mt-10 laptop:mt-30 p-2 laptop:p-0"> */}
+        {/* <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
@@ -120,7 +119,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
         {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
