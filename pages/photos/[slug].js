@@ -5,9 +5,7 @@ import React, { useRef, useState } from "react";
 import { stagger } from "../../animations";
 import BlogEditor from "../../components/BlogEditor";
 import Button from "../../components/Button";
-import ContentSection from "../../components/ContentSection";
 import Cursor from "../../components/Cursor";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { useIsomorphicLayoutEffect } from "../../utils";
@@ -55,13 +53,11 @@ const BlogPost = ({ post }) => {
             {post.tagline}
           </h2>
         </div>
-        <ContentSection content={post.content}></ContentSection>
-        <Footer />
       </div>
       {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
           <Button onClick={() => setShowEditor(true)} type={"primary"}>
-            Edit this blog
+            Edit this photo
           </Button>
         </div>
       )}
@@ -99,7 +95,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  // Specify the directory for voice memos
+  // Specify the directory for photos
   const posts = getAllPosts(["slug"], join(process.cwd(), '_photos'));
 
   return {
