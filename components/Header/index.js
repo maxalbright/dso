@@ -122,6 +122,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     Contact
                   </Button>
+                  <Button 
+                    onClick={() => router.push("/auth/auth")} 
+                    classes="first:ml-1">
+                    Sign In
+                  </Button>
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -180,6 +185,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}
                   >
                     Contact
+                  </Button>
+
+                  <Button 
+                    onClick={() => router.push("/auth/auth")} 
+                    classes="first:ml-1">
+                    Sign In
                   </Button>
                 </div>
               )}
@@ -252,6 +263,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact
             </Button>
+
+            <Button
+              onClick={() => router.push("/auth/auth")}
+              classes="first:ml-1"
+            >
+              Sign In
+            </Button>
+
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -316,6 +335,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact
+              
+            </Button>
+            <Button 
+              onClick={() => router.push("/auth/auth")} 
+              classes="first:ml-1">
+              Sign In
             </Button>
 
             {mounted && theme && data.darkMode && (
