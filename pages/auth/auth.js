@@ -55,13 +55,14 @@ const AuthPage = () => {
     top: "-70%",
     transform: "translateY(-70%)",
     maxWidth: "400px",
-    width: "100%"
+    width: "100%",
+    backgrounColor: "white"
   };
 
   return (
     <div style={containerStyle}>
         <div className="max-w-md mx-auto mt-16 p-6 bg-white shadow-lg rounded-md" style={formContainerStyle}>
-          <h1 className="text-3xl font-bold mb-4">Log In</h1>
+          <h1 className="text-3xl font-bold mb-4" style={{color:"#333"}}>Log In</h1>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
             <input
@@ -83,10 +84,10 @@ const AuthPage = () => {
           {/* <button className="cursor-pointer" onClick={handleSignUp}>
             Sign Up
           </button> */}
-          <button className="cursor-pointer ml-2" onClick={handleLogin}>
+          <button className="cursor-pointer ml-2" onClick={handleLogin} style={{color:"#333"}}>
             Login
           </button>
-          <p className = "mt-2">
+          <p className = "mt-2" style={{color:"#333"}}>
             Don't have an account? <a href="/auth/signup">Sign Up </a>
           </p>
         </div>

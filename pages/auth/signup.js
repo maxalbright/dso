@@ -38,13 +38,14 @@ const SignUpPage = () => {
     top: "-70%",
     transform: "translateY(-70%)",
     maxWidth: "400px",
-    width: "100%"
+    width: "100%",
+    backgrounColor: "white"
   };
 
   return (
     <div style={containerStyle}>
         <div className="max-w-md mx-auto mt-16 p-6 bg-white shadow-lg rounded-md" style={formContainerStyle}>
-        <h1 className="text-3xl font-bold mb-4">Sign Up</h1>
+        <h1 className="text-3xl font-bold mb-4" style={{color:"#333"}}>Sign Up</h1>
         <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
             <input
@@ -63,10 +64,10 @@ const SignUpPage = () => {
             onChange={(e) => setPassword(e.target.value)}
             />
         </div>
-        <button style={buttonStyle} onClick={handleSignUp}>
+        <button style={buttonStyle} onClick={handleSignUp} style={{color:"#333"}}>
             Sign Up
         </button>
-        <p className="mt-2">
+        <p className="mt-2" style={{color:"#333"}}>
             Already have an account? <a href="/auth/auth">Sign In</a>
         </p>
         </div>
