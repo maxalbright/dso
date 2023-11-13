@@ -87,7 +87,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Recipes
                   </Button>
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/timeline")}
                     classes="first:ml-1"
                   >
                     Timeline
@@ -122,8 +122,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     Contact
                   </Button>
-                  <Button 
-                    onClick={() => router.push("/auth/auth")} 
+                  <Button
+                    onClick={() => router.push("/auth/auth")}
                     classes="first:ml-1">
                     Sign In
                   </Button>
@@ -151,7 +151,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Recipes
                   </Button>
                   <Button
-                    onClick={() => router.push("/resume")}
+                    onClick={() => router.push("/timeline")}
                     classes="first:ml-1"
                   >
                     Timeline
@@ -187,8 +187,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Contact
                   </Button>
 
-                  <Button 
-                    onClick={() => router.push("/auth/auth")} 
+                  <Button
+                    onClick={() => router.push("/auth/auth")}
                     classes="first:ml-1">
                     Sign In
                   </Button>
@@ -230,7 +230,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Recipes
             </Button>
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/timeline")}
               classes="first:ml-1"
             >
               Timeline
@@ -303,7 +303,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               Recipes
             </Button>
             <Button
-              onClick={() => router.push("/resume")}
+              onClick={() => router.push("/timeline")}
               classes="first:ml-1"
             >
               Timeline
@@ -335,10 +335,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact
-              
+
             </Button>
-            <Button 
-              onClick={() => router.push("/auth/auth")} 
+            <Button
+              onClick={() => router.push("/auth/auth")}
               classes="first:ml-1">
               Sign In
             </Button>

@@ -58,22 +58,15 @@
     "services": [],
     "aboutpara": "Welcome to MemoryLane, where we bring your life story to life.\n\nWe are passionate about preserving and celebrating your cherished memories.\n\nOur vision is a world where every memory becomes a lasting legacy.\nWhether you're a family capturing the growth of your children or an elderly individual leaving a heartfelt story, we provide the canvas for your memories.\n\nExplore Our Plans\nChoose from our free or subscription-based plans for more storage and customization.\n\nJoin Our Community\nJoin our vibrant community of memory enthusiasts and start your MemoryLane journey today!",
     "resume": {
-        "tagline": "👋  I'm a software engineer, product designer.",
-        "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+        "tagline": "👋  I'm a Mother of 3",
+        "description": "I've spent the last 15 years raising 3 beautiful children, and it's my goal to document these great memories on this page",
         "experiences": [
             {
-                "id": "1",
-                "dates": "March 2022 - Present",
-                "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Bullet One, Bullet Two"
-            },
-            {
-                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-                "dates": "July 2020 - March 2022",
-                "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+                "id": "f1e34375-5bc0-4949-bee0-5b2790b634e6",
+                "dates": "03/24/1980",
+                "type": "Robbinsdale, Minnesota",
+                "position": "Birth",
+                "bullets": "Born in a hospital in rural Minnesota, Surrounded by friends and family, Gave birth to Samantha at 2pm!"
             }
         ],
         "education": {

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Button from "../components/Button";
-import Header from "../components/Header";
-import { v4 as uuidv4 } from "uuid";
 import { useTheme } from "next-themes";
-
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import Button from "../components/Button";
+import Cursor from "../components/Cursor";
+import Header from "../components/Header";
 // Data
 import yourData from "../data/portfolio.json";
-import Cursor from "../components/Cursor";
+
 
 const Edit = () => {
   // states
@@ -57,6 +57,20 @@ const Edit = () => {
     const copyProjects = data.projects;
     copyProjects = copyProjects.filter((project) => project.id !== id);
     setData({ ...data, projects: copyProjects });
+  };
+
+  const deleteExperience = (id) => {
+    // Filter out the experience with the given id
+    const updatedExperiences = data.resume.experiences.filter((experience) => experience.id !== id);
+
+    // Update the state with the new array of experiences
+    setData({
+      ...data,
+      resume: {
+        ...data.resume,
+        experiences: updatedExperiences
+      },
+    });
   };
 
   // Services Handler
@@ -196,7 +210,7 @@ const Edit = () => {
               onClick={() => setCurrentTabs("RESUME")}
               type={currentTabs === "RESUME" && "primary"}
             >
-              Resume
+              Timeline
             </Button>
           </div>
         </div>
@@ -587,7 +601,7 @@ const Edit = () => {
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button
-                      // onClick={() => deleteProject(project.id)}
+                      onClick={() => deleteExperience(experiences.id)}
                       type="primary"
                     >
                       Delete
@@ -727,179 +741,11 @@ const Edit = () => {
             </div>
             <hr className="my-10"></hr>
             <div className="mt-10">
-              <div className="flex">
-                <label className="w-1/5 text-lg opacity-50">Languages</label>
-                <div className="w-4/5 ml-10 flex flex-col">
-                  {data.resume.languages.map((language, index) => (
-                    <div key={index} className="flex">
-                      <input
-                        value={language}
-                        onChange={(e) => {
-                          setData({
-                            ...data,
-                            resume: {
-                              ...data.resume,
-                              languages: [
-                                ...data.resume.languages.slice(0, index),
-                                e.target.value,
-                                ...data.resume.languages.slice(index + 1),
-                              ],
-                            },
-                          });
-                        }}
-                        className="w-full p-2 rounded-md shadow-lg border-2"
-                        type="text"
-                      ></input>
-                      <Button
-                        onClick={() =>
-                          setData({
-                            ...data,
-                            resume: {
-                              ...data.resume,
-                              languages: data.resume.languages.filter(
-                                (value, i) => index !== i
-                              ),
-                            },
-                          })
-                        }
-                      >
-                        Remove
-                      </Button>
-                    </div>
-                  ))}
-                  <Button
-                    type="primary"
-                    classes="hover:scale-100"
-                    onClick={() =>
-                      setData({
-                        ...data,
-                        resume: {
-                          ...data.resume,
-                          languages: [...data.resume.languages, "Added"],
-                        },
-                      })
-                    }
-                  >
-                    Add +
-                  </Button>
-                </div>
-              </div>
+
               <hr className="my-10"></hr>
-              <div className="flex">
-                <label className="w-1/5 text-lg opacity-50">Frameworks</label>
-                <div className="w-4/5 ml-10 flex flex-col">
-                  {data.resume.frameworks.map((framework, index) => (
-                    <div key={index} className="flex">
-                      <input
-                        value={framework}
-                        onChange={(e) => {
-                          setData({
-                            ...data,
-                            resume: {
-                              ...data.resume,
-                              frameworks: [
-                                ...data.resume.frameworks.slice(0, index),
-                                e.target.value,
-                                ...data.resume.frameworks.slice(index + 1),
-                              ],
-                            },
-                          });
-                        }}
-                        className="w-full p-2 rounded-md shadow-lg border-2"
-                        type="text"
-                      ></input>
-                      <Button
-                        onClick={() =>
-                          setData({
-                            ...data,
-                            resume: {
-                              ...data.resume,
-                              frameworks: data.resume.frameworks.filter(
-                                (value, i) => index !== i
-                              ),
-                            },
-                          })
-                        }
-                      >
-                        Remove
-                      </Button>
-                    </div>
-                  ))}
-                  <Button
-                    onClick={() =>
-                      setData({
-                        ...data,
-                        resume: {
-                          ...data.resume,
-                          frameworks: [...data.resume.frameworks, "Added"],
-                        },
-                      })
-                    }
-                    type="primary"
-                    classes="hover:scale-100"
-                  >
-                    Add +
-                  </Button>
-                </div>
-              </div>
+
               <hr className="my-10"></hr>
-              <div className="flex">
-                <label className="w-1/5 text-lg opacity-50">Others</label>
-                <div className="w-4/5 ml-10 flex flex-col">
-                  {data.resume.others.map((other, index) => (
-                    <div key={index} className="flex">
-                      <input
-                        value={other}
-                        onChange={(e) => {
-                          setData({
-                            ...data,
-                            resume: {
-                              ...data.resume,
-                              others: [
-                                ...data.resume.others.slice(0, index),
-                                e.target.value,
-                                ...data.resume.others.slice(index + 1),
-                              ],
-                            },
-                          });
-                        }}
-                        className="w-full p-2 rounded-md shadow-lg border-2"
-                        type="text"
-                      ></input>
-                      <Button
-                        onClick={() =>
-                          setData({
-                            ...data,
-                            resume: {
-                              ...data.resume,
-                              others: data.resume.others.filter(
-                                (value, i) => index !== i
-                              ),
-                            },
-                          })
-                        }
-                      >
-                        Remove
-                      </Button>
-                    </div>
-                  ))}
-                  <Button
-                    onClick={() =>
-                      setData({
-                        ...data,
-                        resume: {
-                          ...data.resume,
-                          others: [...data.resume.others, "Added"],
-                        },
-                      })
-                    }
-                    type="primary"
-                    classes="hover:scale-100"
-                  >
-                    Add +
-                  </Button>
-                </div>
-              </div>
+
             </div>
           </div>
         )}
