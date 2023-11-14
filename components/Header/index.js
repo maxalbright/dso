@@ -110,12 +110,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     Voice Memos
                   </Button>
-                  <Button
+                  {/* <Button
                     onClick={() => router.push("/resume")}
                     classes="first:ml-1"
                   >
                     Plans/Pricing
-                  </Button>
+                  </Button> */}
 
                   <Button
                     onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}
@@ -174,12 +174,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     Voice Memos
                   </Button>
-                  <Button
+                  {/* <Button
                     onClick={() => router.push("/resume")}
                     classes="first:ml-1"
                   >
                     Plans/Pricing
-                  </Button>
+                  </Button> */}
 
                   <Button
                     onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}
@@ -253,12 +253,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               Voice Memos
             </Button>
-            <Button
+            {/* <Button
               onClick={() => router.push("/resume")}
               classes="first:ml-1"
             >
               Plans/Pricing
-            </Button>
+            </Button> */}
 
             <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact
@@ -326,12 +326,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               Voice Memos
             </Button>
-            <Button
+            {/* <Button
               onClick={() => router.push("/resume")}
               classes="first:ml-1"
             >
               Plans/Pricing
-            </Button>
+            </Button> */}
 
             <Button onClick={() => window.open("mailto:maxdanielalbright@gmail.com")}>
               Contact

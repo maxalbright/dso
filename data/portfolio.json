@@ -1,5 +1,5 @@
 {
-    "name": "James Potter",
+    "name": "MemoryLane",
     "headerTaglineOne": "Hello 👋",
     "headerTaglineTwo": "Welcome to MemoryLane.",
     "headerTaglineThree": "",
@@ -68,13 +68,11 @@
                 "bullets": "Born to parents Fleamont and Euphemia Potter"
             }
         ],
-
         "education": {
             "universityName": "Hogwarts School of Witchcraft and Wizardry",
             "universityDate": "1971-1978",
             "universityPara": "• Sorted into Gryffindor House\n •Became friends with Sirius Black, Remus Lupin, and Peter Pettigrew\n •Became an accomplished Quidditch player and played as Chaser for the Gryffindor team\n •Met Lily Evans and fell in love"
         },
-
         "joiningoftp": {
             "orgName": "Joining the Order of the Phoenix",
             "joiningDate": "1978",
@@ -88,7 +86,6 @@
             "joiningDate": "October 31,1981",
             "para": "• Voldemort found the Potters in their hiding place\n •Lily and James sacrificed themselves to save Harry\n •Their love and sacrifice protected Harry from Voldemort's killing curse, rebounding it and rendering Voldemort powerless"
         },
-
         "languages": [
             "Javascript",
             "HTML5",
