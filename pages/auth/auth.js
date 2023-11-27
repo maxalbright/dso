@@ -31,6 +31,13 @@ const AuthPage = () => {
       router.push("/");
     } catch (error) {
       console.error("Error during login:", error.message);
+      console.log("Firebase Error Code:", error.code);
+      console.log("Firebase Error Message:", error.message);
+      if (error.code === "auth/invalid-login-credentials"){
+        alert("Incorrect email or password. Please check your credentials and try again.");
+      } else{
+        alert("An error occurred during login. Please try again.");
+      }
     }
   };
   
