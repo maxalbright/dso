@@ -1,12 +1,12 @@
 // AuthPage.js
-import React, { useState } from "react";
-import { useRouter } from "next/router";
 import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from "firebase/auth";
-import { db, storage, auth } from "../../firebase";
+import Link from 'next/link';
+import { useRouter } from "next/router";
+import React, { useState } from "react";
+import { auth } from "../../firebase";
+<Link href="/auth/auth"><a>Sign In</a></Link>
 const AuthPage = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -33,14 +33,14 @@ const AuthPage = () => {
       console.error("Error during login:", error.message);
       console.log("Firebase Error Code:", error.code);
       console.log("Firebase Error Message:", error.message);
-      if (error.code === "auth/invalid-login-credentials"){
+      if (error.code === "auth/invalid-login-credentials") {
         alert("Incorrect email or password. Please check your credentials and try again.");
-      } else{
+      } else {
         alert("An error occurred during login. Please try again.");
       }
     }
   };
-  
+
   const buttonStyle = {
     cursor: "pointer",
     // Add any other styles you need here
@@ -68,37 +68,37 @@ const AuthPage = () => {
 
   return (
     <div style={containerStyle}>
-        <div className="max-w-md mx-auto mt-16 p-6 bg-white shadow-lg rounded-md" style={formContainerStyle}>
-          <h1 className="text-3xl font-bold mb-4" style={{color:"#333"}}>Log In</h1>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-            <input
-              className="border rounded-md w-full py-2 px-3"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Password:</label>
-            <input
-              className="border rounded-md w-full py-2 px-3"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          {/* <button className="cursor-pointer" onClick={handleSignUp}>
+      <div className="max-w-md mx-auto mt-16 p-6 bg-white shadow-lg rounded-md" style={formContainerStyle}>
+        <h1 className="text-3xl font-bold mb-4" style={{ color: "#333" }}>Log In</h1>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+          <input
+            className="border rounded-md w-full py-2 px-3"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        {/* <button className="cursor-pointer" onClick={handleSignUp}>
             Sign Up
           </button> */}
-          <button className="cursor-pointer ml-2" onClick={handleLogin} style={{color:"#333"}}>
-            Login
-          </button>
-          <p className = "mt-2" style={{color:"#333"}}>
-            Don't have an account? <a href="/auth/signup">Sign Up </a>
-          </p>
-        </div>
+        <button className="cursor-pointer ml-2" onClick={handleLogin} style={{ color: "#333" }}>
+          Login
+        </button>
+        <p className="mt-2" style={{ color: "#333" }}>
+          Don&apos;t have an account?  <Link href="/auth/signup"><a>Sign Up</a></Link>
+        </p>
       </div>
+    </div>
   );
 };
 
