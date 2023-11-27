@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
+import RecommendationForm from "../components/RecommendationForm";
 // Local Data
 import data from "../data/portfolio.json";
 import { useIsomorphicLayoutEffect } from "../utils";
@@ -133,6 +134,7 @@ export default function Home() {
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
+          <RecommendationForm />
         </div>
         <Footer />
       </div>
