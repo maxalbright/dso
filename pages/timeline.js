@@ -8,6 +8,8 @@ import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
 import data, { name, resume, showResume } from "../data/portfolio.json";
 
+
+
 const Resume = () => {
   const router = useRouter();
   const theme = useTheme();
@@ -19,7 +21,8 @@ const Resume = () => {
       router.push("/");
     }
   }, []);
-  return (
+
+    return (
     <>
       {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
@@ -33,6 +36,7 @@ const Resume = () => {
         className={`container mx-auto mb-10 ${data.showCursor && "cursor-none"
           }`}
       >
+
         <Header isBlog />
         {mount && (
           <div className="mt-10 w-full flex flex-col items-center">
@@ -43,7 +47,14 @@ const Resume = () => {
               <h1 className="text-3xl font-bold">{name}</h1>
               <h2 className="text-xl mt-5">{resume.tagline}</h2>
               <h2 className="w-4/5 text-xl mt-5 opacity-50">
-                {resume.description}
+                <em>{resume.description}</em>
+                <div className="w-1/4">
+                  <img
+                      src="/jamespotter.jpeg" // Update the path to match the actual location of your image
+                      alt="James Potter"
+                      className="w-full h-auto"
+                  ></img>
+                </div>
               </h2>
               <div className="mt-2">
                 <Socials />
