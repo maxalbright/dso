@@ -17,6 +17,8 @@ const Footer = ({ }) => {
       <h1 className="text-sm text-bold mt-2 laptop:mt-10 p-2 laptop:p-0">
 
       </h1>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4585351473518114"
+        crossOrigin="anonymous"></script>
     </>
   );
 };

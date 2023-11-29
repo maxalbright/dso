@@ -1,7 +1,7 @@
 import React from "react";
+import yourData from "../../data/portfolio.json";
 import Button from "../Button";
 
-import yourData from "../../data/portfolio.json";
 
 const Socials = ({ className }) => {
   return (
@@ -11,6 +11,8 @@ const Socials = ({ className }) => {
           {social.title}
         </Button>
       ))}
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4585351473518114"
+        crossOrigin="anonymous"></script>
     </div>
   );
 };
